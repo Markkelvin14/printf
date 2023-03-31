@@ -4,7 +4,7 @@
  * _search_specifier - searches for format specifier and calls
  * appropriate function.
  * @arg: arguments list variable
- * @C: specifier
+ * @c: specifier
  * @count: Buffer count from _printf()
  * @buffer: buffer from _printf()
  */
