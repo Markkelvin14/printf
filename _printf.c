@@ -1,6 +1,6 @@
 #include "main.h"
 
-int _formatsize(char * str)
+int _formatsize(char *str)
 {
 	int i, j;
 
@@ -16,7 +16,7 @@ int _formatsize(char * str)
 	return (j);
 }
 
-int _printf(char* format, ...)
+int _printf(char *format, ...)
 {
 	unsigned int i, j;
 	unsigned int *buffer_count;
