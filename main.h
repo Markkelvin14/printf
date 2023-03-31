@@ -1,11 +1,9 @@
 #if !defined(MAIN_H)
 #define MAIN_H
 
-#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdarg.h>
-#define TYPE
 
 int _printf(char* format, ...);
 int _size(char *str);
