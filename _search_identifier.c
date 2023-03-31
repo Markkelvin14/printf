@@ -26,7 +26,6 @@ void _search_specifier(void *buffer, unsigned int *count, va_list *arg, char c)
 		_string(buffer, count, va_arg(*arg, char *));
 		break;
 	default:
-		
 		break;
 	}
 }
