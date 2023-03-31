@@ -27,8 +27,9 @@ void rev_string(char *s)
 }
 
 /**
- * size - gets the size of string
+ * _size - gets the size of string
  * @str: string argument
+ * Return: size of str
 */
 int _size(char *str)
 {
@@ -43,6 +44,7 @@ int _size(char *str)
 /**
  * _tochar - converts integer to string
  * @n: integer argument
+ * Return: char pointer
 */
 char *_tochar(int n)
 {
@@ -51,7 +53,7 @@ char *_tochar(int n)
 
 	i = digit = 0;
 	store2 = n;
-	if (n < 0) 
+	if (n < 0)
 	{
 		n *= -1;
 	}
@@ -61,8 +63,10 @@ char *_tochar(int n)
 		store /= 10;
 		digit++;
 	}
-	if(store2 < 0) buff = malloc(digit + 2);
-	else buff = malloc(digit + 1);
+	if (store2 < 0) 
+		buff = malloc(digit + 2);
+	else
+		buff = malloc(digit + 1);
 	store = n;
 	while (i < digit)
 	{
@@ -73,48 +77,10 @@ char *_tochar(int n)
 	{
 		buff[i++] = '-';
 		buff[i] = '\0';
-	} else 
+	} else
 	{
 		buff[i] = '\0';
 	}
 	rev_string(buff);
 	return (buff);
-}
-
-/**
- * _realloc - reallocates a memory block using malloc and free
- * @ptr: old pointer
- * @old_size: old size
- * @new_size: new_size
- * Return:  pointer
- */
-
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
-{
-	void *ptr_new;
-	int i, size;
-
-	i = 0, size = old_size;
-	if (old_size > new_size)
-		size = new_size;
-	if (new_size == old_size)
-		return (ptr);
-	if (ptr == NULL)
-	{
-		ptr = malloc(new_size);
-		return (ptr);
-	}
-	if (new_size == 0 && ptr != NULL)
-	{
-		free(ptr);
-		return (NULL);
-	}
-	ptr_new = malloc(new_size);
-	while (i < size)
-	{
-		*((char *)ptr_new + i) = *((char *)ptr + i);
-		i++;
-	}
-	free(ptr);
-	return (ptr_new);
 }
