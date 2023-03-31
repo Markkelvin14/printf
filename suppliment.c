@@ -4,6 +4,7 @@
  * rev_string - Reverses a string
  * @s: string argument
 */
+
 void rev_string(char *s)
 {
 	int i, j;
@@ -29,7 +30,7 @@ void rev_string(char *s)
  * size - gets the size of string
  * @str: string argument
 */
-int _size(char* str)
+int _size(char *str)
 {
 	int i;
 
