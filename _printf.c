@@ -40,7 +40,7 @@ int _printf(char *format, ...)
 	arg = &arguments;
 	i = j = 0;
 	buffer_count = &i;
-	buffer = malloc(100);
+	buffer = malloc(1024);
 
 	while (format[j] != '\0')
 	{
