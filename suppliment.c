@@ -63,7 +63,7 @@ char *_tochar(int n)
 		store /= 10;
 		digit++;
 	}
-	if (store2 < 0) 
+	if (store2 < 0)
 		buff = malloc(digit + 2);
 	else
 		buff = malloc(digit + 1);
