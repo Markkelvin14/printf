@@ -3,10 +3,13 @@
 /**
  * _search_specifier - searches for format specifier and calls
  * appropriate function.
- * @str: format string
+ * @arg: arguments list variable
+ * @C: specifier
+ * @count: Buffer count from _printf()
+ * @buffer: buffer from _printf()
  */
 
-void _search_specifier(void *buffer,unsigned int *count, va_list *arg, char c)
+void _search_specifier(void *buffer, unsigned int *count, va_list *arg, char c)
 {
 	switch (c)
 	{
