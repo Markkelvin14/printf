@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+* _formatsize - gets size of format string withouth the format specifiers
+* @str: format string
+* Return: lenght of str
+*/
 int _formatsize(char *str)
 {
 	int i, j;
@@ -15,6 +20,13 @@ int _formatsize(char *str)
 	}
 	return (j);
 }
+
+
+/**
+* _printf - prints formated string to standard output
+* @format: format string
+* Return: lenght of printed characters
+*/
 
 int _printf(char *format, ...)
 {
